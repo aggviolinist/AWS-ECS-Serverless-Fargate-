@@ -1,5 +1,5 @@
 # Hosting a two tier website on AWS-ECS-Serverless-Fargate using docker
-## Tools wwe are using
+## Tools we are using
 ### VPC
 ### Dynamo DB
 ### ECS - fargate
