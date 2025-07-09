@@ -8,6 +8,8 @@
 ### Application Load Balancer
 ### IAM
 ### EC2
+### RDS
+### Secrets Manager
 ## Create a VPC
 ```sh
 ## Use the AWS console
@@ -66,8 +68,13 @@ Push docker images to ECR
 ## RDS
 ```sh
 Create an RDS MYSQL DB
-- We have a VPC (created above)
-- We need to have a subnet group which connects the subnets of AZ1 and AZ2 (standard for all RDS)
-- We will have both a `master and standby instance`
+We have a VPC (created above)
+We need to have a subnet group which connects the subnets of AZ1 and AZ2 (standard for all RDS)
+We will have both a `master and standby instance`
+- Create a subnet group and associate the two subnets created in virtual-roast VPC to it
+- Create the MYSQL database
 ```
+## Secrets Manager
+```sh
+
 
