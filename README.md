@@ -46,11 +46,11 @@ On IAM we need to add permissions for:
 ```sh
 Using the IAM we now create an EC2 instance that we will use to uplaod our docker file and upload content to ECR
 - We now connect to the EC2 using sessions manager
-- Change User::: sudo su - ec2-user
-- Check for updates::: sudo yum update -y
-- Install docker::: sudo yum install docker
-- Start docker::: sudo service docker start
-- Place EC2 user in the docker group::: sudo usermod -a -G docker ec2-user
-- Restart the instance::: exit
-- Download the docker files from github::: wget 
+- Change User::: `sudo su - ec2-user`
+- Check for updates::: `sudo yum update -y`
+- Install docker::: `sudo yum install docker`
+- Start docker::: `sudo service docker start`
+- Place EC2 user in the docker group::: `sudo usermod -a -G docker ec2-user`
+- Restart the instance::: `exit`
+- Download the docker files from github::: `wget `
 ```
