@@ -38,7 +38,7 @@ Build a docker image
 ```
 ```sh
 ## IAM
-On IAM we need to add permissoins for:
-- EC2 to build a container using ECR -  We are able to upload ECR images
-- SSM managed instance core - Remotely connect to an instance using sessions manager
+On IAM we need to add permissions for:
+- EC2 to build a container using ECR -  We are able to upload ECR images >EC2InstanceProfileForImageBuilderECRContainerBuilds 
+- SSM managed instance core - Remotely connect to an instance using sessions manager >AmazonSSMManagedInstanceCore
 ```
