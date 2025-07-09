@@ -54,7 +54,8 @@ Using the IAM we now create an EC2 instance that we will use to uplaod our docke
 - Restart the instance::: `exit`
 - Download the docker files from github::: `wget https://github.com/iaasacademy/aws-how-to-guide/raw/238deeefb955ddef46c673f5154754f679410d57/amazon-ecs-mini-project/ritual-roast-code.zip`
 - Unzip the file::: `unzip ritual-roast.zip`
-- Buid docker::: docker build -t 123345876543.dkr.ecr.us-east-1.amazonaws.com/ritual-roast
+- Buid docker::: `docker build -t 123345876543.dkr.ecr.us-east-1.amazonaws.com/ritual-roast .`
+- Confirm the images in docker::: `docker images`
 ```
 ## ECR
 ```sh
