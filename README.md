@@ -76,5 +76,13 @@ We will have both a `master and standby instance`
 ```
 ## Secrets Manager
 ```sh
+ - Create a security group on our VPC for the database to talk to itself since it doesn't allow traffic from somewhere else this will make rotation of passwords by secrets manager very easy
+- Create the secrets manager and then create a lambda that rotates the password after 7 days
+```
+## Application Load Balancer
+```sh
+
+
+```
 
 
