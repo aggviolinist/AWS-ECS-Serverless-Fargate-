@@ -52,5 +52,21 @@ Using the IAM we now create an EC2 instance that we will use to uplaod our docke
 - Start docker::: `sudo service docker start`
 - Place EC2 user in the docker group::: `sudo usermod -a -G docker ec2-user`
 - Restart the instance::: `exit`
-- Download the docker files from github::: `wget `
+- Download the docker files from github::: `wget https://github.com/iaasacademy/aws-how-to-guide/raw/238deeefb955ddef46c673f5154754f679410d57/amazon-ecs-mini-project/ritual-roast-code.zip`
+- Unzip the file::: `unzip ritual-roast.zip`
+- Buid docker::: docker build -t 123345876543.dkr.ecr.us-east-1.amazonaws.com/ritual-roast
 ```
+## ECR
+```sh
+Push docker images to ECR
+- Retrieve an authentication token and authenticate your Docker client to your registry.
+- Run the command to push image to your newly created AWS repository.
+```
+## RDS
+```sh
+Create an RDS MYSQL DB
+- We have a VPC (created above)
+- We need to have a subnet group which connects the subnets of AZ1 and AZ2 (standard for all RDS)
+- We will have both a `master and standby instance`
+```
+
