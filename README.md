@@ -91,8 +91,18 @@ I noted that we can't have a target group/ ALB using the default VPC, we need to
 ```sh
 We are gonna set up a single role with a couple of policies
 - ECS needs to download the image and send log info to cloudwatch
+ - ECS role (we select task )
+   - AmazonECSTaskExecutionRolePolicy (ECR access and send logs to cloudwatch)
+   - Allow ECS to read secret manager
 - We want the ECS to access the secrets manager for the passwords
-
+```
+## ECS Cluster
+```sh
+Create an ECS cluster
+```
+## Create an ECS Task definition
+```sh
+We bring together env vars, secret manager secrets, and roles together to define the task
 ```
 
 
