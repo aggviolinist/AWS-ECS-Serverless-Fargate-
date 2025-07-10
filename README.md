@@ -103,6 +103,17 @@ Create an ECS cluster
 ## Create an ECS Task definition
 ```sh
 We bring together env vars, secret manager secrets, and roles together to define the task
+- Also define the container itself, Env Vars
+```
+## Create an ECS Service
+```sh
+We are able to specify;
+- If we want a service or task
+    - We choose a service since this is a long running group of tasks that can be stopped and restarted:: Very usable for our use case, a website
+    - On the other hand Task is for batch operations and standalone tasks that run and terminate 
+- How many tasks we want
+- What is the auto scaling policy
+- The ALB, VPC
 ```
 
 
