@@ -12,11 +12,11 @@
 ### Secrets Manager
 ## Create a VPC
 ```sh
-## Use the AWS console
+# Use the AWS console
 ```
 ## VPC
 ```sh
-## Create a VPC with the following specs
+# Create a VPC with the following specs
    - 2 AZ's (High Durability)
    - 2 Public Subnets (Both internet facing, one is active one is for back up)
    - 4 private subnets (First two are for the container,docker and the database and the other two are backup )
@@ -24,14 +24,15 @@
 ```
 ## Security Group
 ```sh
-## Create Secuity Groups
+# Create Secuity Groups
    - Intenet access:: The first one is to give access from anywhere in the internet http: (0.0.0.0/0)
    - App:: The second one is to only allow the ALB to give access to the Containers
    - RDS Database:: The third one is on port 3306. It gives the app access to the RDS database
+   - On RDS DB Security group:: We also need the Security group to access itself so that lambda can communicate with it when it needs to update passwords every 7 days
 ```
 ## ECR
 ```sh
-## Create a repo in ECR
+# Create a repo in ECR
    - Create a private repo and note the URI
 ```
 ## Docker
@@ -76,7 +77,7 @@ We will have both a `master and standby instance`
 ```
 ## Secrets Manager
 ```sh
- - Create a security group on our VPC for the database to talk to itself since it doesn't allow traffic from somewhere else this will make rotation of passwords by secrets manager very easy
+ -On RDS, create a security group on our VPC for the database to talk to itself since it doesn't allow traffic from somewhere else this will make rotation of passwords by secrets manager very easy
 - Create the secrets manager and then create a lambda that rotates the password after 7 days
 ```
 ## Application Load Balancer
@@ -115,5 +116,10 @@ We are able to specify;
 - What is the auto scaling policy
 - The ALB, VPC
 ```
+## Output
+> ![Alt text](./images/pic2.png?raw=true "Our website was hosted successfully")
+> ![Alt text](./images/pic3.png?raw=true "Our website was hosted successfully")
+> ![Alt text](./images/pic1.png?raw=true "Our website was hosted successfully")
+
 
 
