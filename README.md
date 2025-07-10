@@ -81,8 +81,11 @@ We will have both a `master and standby instance`
 ```
 ## Application Load Balancer
 ```sh
-
-
+A prerequisite to using an ALB is to make a target group with the fargate instances
+We are going to be using IP addresses and not Instances when we specify target group details
+- We use a file called `health.html`
+- Create an ALB and choose our target groups
+I noted that we can't have a target group/ ALB using the default VPC, we need to use a custom VPC that has internet facing subnets (HTTP)
 ```
 
 
