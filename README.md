@@ -117,9 +117,9 @@ We are able to specify;
 - The ALB, VPC
 ```
 ## Output
-> ![Alt text](./images/pic2.png?raw=true "Our website was hosted successfully")
-> ![Alt text](./images/pic3.png?raw=true "Our website was hosted successfully")
-> ![Alt text](./images/pic1.png?raw=true "Our website was hosted successfully")
+> ![Alt text](.ritual-roast/images/pic2.png?raw=true "Our website was hosted successfully")
+> ![Alt text](.ritual-roast/images/pic3.png?raw=true "Our website was hosted successfully")
+> ![Alt text](./ritual-roast/images/pic1.png?raw=true "Our website was hosted successfully")
 
 
 
