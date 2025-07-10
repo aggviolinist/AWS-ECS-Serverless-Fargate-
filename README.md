@@ -87,5 +87,12 @@ We are going to be using IP addresses and not Instances when we specify target g
 - Create an ALB and choose our target groups
 I noted that we can't have a target group/ ALB using the default VPC, we need to use a custom VPC that has internet facing subnets (HTTP)
 ```
+## IAM Execution roles
+```sh
+We are gonna set up a single role with a couple of policies
+- ECS needs to download the image and send log info to cloudwatch
+- We want the ECS to access the secrets manager for the passwords
+
+```
 
 
